@@ -12,7 +12,7 @@ const AddTaskModal = ({ isAddTaskModalOpen, setAddTaskModal, projectId = null, t
 
     useEffect(() => {
         if (edit && isAddTaskModalOpen) {
-            axios.get(`http://localhost:9000/project/${projectId}/task/${taskId}`)
+            axios.get(`https://project-management-1-22am.onrender.com`)
                 .then((res) => {
                     setTitle(res.data[0].task[0].title)
                     setDesc(res.data[0].task[0].description)

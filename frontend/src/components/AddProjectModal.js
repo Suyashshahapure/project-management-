@@ -12,7 +12,7 @@ const AddProjectModal = ({ isModalOpen, closeModal, edit = false, id = null }) =
 
     useEffect(() => {
         if (edit && isModalOpen) {
-            axios.get(`http://localhost:9000/project/${id}`)
+            axios.get(`https://project-management-1-22am.onrender.com`)
                 .then((res) => {
                     setTitle(res.data[0].title)
                     setDesc(res.data[0].description)
